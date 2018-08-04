@@ -17,7 +17,24 @@
 
         .jumbotron {
           border: red solid 1px;
- }
+        }
+        
+
+        .label-primary {
+         background-color: #ee0000;
+          }
+        .label {
+          display: inline;
+          padding: .2em .6em .3em;
+          font-size: 75%;
+          font-weight: 700;
+          line-height: 1;
+          color: #fff;
+          text-align: center;
+          white-space: nowrap;
+          vertical-align: baseline;
+          border-radius: .25em;
+        }  
     </style>
 
     <title>Tables and Current Reservations</title>
@@ -36,32 +53,34 @@
   </div>
   <div class="row">
       <div class="card mx-auto mt-2 w-50">
-          <div class="card-header">
+          <div class="card-header bg-info text-white">
             Current Reservations
           </div>
           <div class="card-body">
-            <blockquote class="blockquote mb-0">
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante. it. Integer posuere erat a anit. Integer posuere erat a an</p>
-              <footer class="blockquote-footer">Someone famous in <cite title="Source Title">Source Title</cite></footer>
-            </blockquote>
+              <div class=well>
+                  <h2>
+                    <span class="label label-primary">1</span> |1
+                  </h2>
+                </div>
           </div>
         </div>
   </div>
       <div class="row">
           <div class="card mx-auto mt-2 w-50">
-              <div class="card-header">
+              <div class="card-header bg-danger text-white">
                 Waiting List
               </div>
               <div class="card-body">
-                <blockquote class="blockquote mb-0">
-                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
-                  <footer class="blockquote-footer">Someone famous in <cite title="Source Title">Source Title</cite></footer>
-                </blockquote>
+                <div class=well>
+                  <h2>
+                    <span class="label label-primary">1</span> |1
+                  </h2>
+                </div>
               </div>
             </div>
       </div>
   </div>
-  <div class="row">
+  <div class="row mt-4">
     <div class="footer">
 
     </div>
