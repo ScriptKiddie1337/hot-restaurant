@@ -50,7 +50,6 @@ res.json(newReservation)
 })
 // Starts the server to begin listening
 // =============================================================
-app.listen(PORT, function (err) {
-  if (err) throw
-  console.log("App listening on PORT " + PORT);
+app.listen(PORT, function () {
+    console.log("App listening on PORT " + PORT);
 });
