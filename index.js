@@ -31,6 +31,7 @@ app.get("/api/tables", function (req, res) {
 
 // Starts the server to begin listening
 // =============================================================
-app.listen(PORT, function () {
+app.listen(PORT, function (err) {
+  if (err) throw
   console.log("App listening on PORT " + PORT);
 });
