@@ -29,6 +29,13 @@ app.get("/api/tables", function (req, res) {
   return res.json(tables);
 });
 
+// Post to tables
+app.post("api/tables", function(req, res) {
+  let newReservation = req.body; 
+  tables.push(newReservation);
+
+res.json(newReservation)
+})
 // Starts the server to begin listening
 // =============================================================
 app.listen(PORT, function (err) {
