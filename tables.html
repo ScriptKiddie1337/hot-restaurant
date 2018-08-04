@@ -1,9 +1,5 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
@@ -14,70 +10,89 @@
           background-size:cover;
         }
 
-        .jumbotron {
-          border: red solid 1px;
-        }
-        
 
-        .label-primary {
-         background-color: #ee0000;
-          }
-        .label {
-          display: inline;
-          padding: .2em .6em .3em;
-          font-size: 75%;
-          font-weight: 700;
-          line-height: 1;
-          color: #fff;
-          text-align: center;
-          white-space: nowrap;
-          vertical-align: baseline;
-          border-radius: .25em;
-        }  
-    </style>
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+    crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ"
+    crossorigin="anonymous">
+  <link rel="stylesheet" href="css/main.css">
+  <style>
+    body {
+      background-image: url("images/bg.jpg");
+      background-size: cover;
+    }
 
-    <title>Tables and Current Reservations</title>
-  </head>
-  <body>
+    .jumbotron {
+      border: red solid 1px;
+    }
+
+
+    .label-primary {
+      background-color: #ee0000;
+    }
+
+    .label {
+      display: inline;
+      padding: .2em .6em .3em;
+      font-size: 75%;
+      font-weight: 700;
+      line-height: 1;
+      color: #fff;
+      text-align: center;
+      white-space: nowrap;
+      vertical-align: baseline;
+      border-radius: .25em;
+    }
+  </style>
+
+  <title>Tables and Current Reservations</title>
+</head>
+
+<body>
   <div class="container-fluid">
-  <div class="row">
-    <div class="jumbotron mx-auto mt-2 w-50">
-          <h1 class="display-4 text-center">Le Gavroche Currenet Reservations List</h1>
-          <hr class="my-4">
-          <div class="text-center">
-            <a class="btn btn-info btn-lg" href="/" role="button"><i class="fas fa-home"></i></a>
-            <a class="btn btn-danger btn-lg" href="/reservations" role="button"><i class="fas fa-utensils"></i> Make Reservations</a>
-          </div>
+    <div class="row">
+      <div class="jumbotron mx-auto mt-2 w-50">
+        <h1 class="display-4 text-center">Le Gavroche Currenet Reservations List</h1>
+        <hr class="my-4">
+        <div class="text-center">
+          <a class="btn btn-info btn-lg" href="/" role="button">
+            <i class="fas fa-home"></i>
+          </a>
+          <a class="btn btn-danger btn-lg" href="/reservations" role="button">
+            <i class="fas fa-utensils"></i> Make Reservations</a>
+        </div>
       </div>
-  </div>
-  <div class="row">
+    </div>
+    <div class="row">
       <div class="card mx-auto mt-2 w-50">
-          <div class="card-header bg-info text-white">
-            Current Reservations
-          </div>
-          <div class="card-body">
-              <div class=well>
-                  <h2>
-                    <span class="label label-primary">1</span> |1
-                  </h2>
-                </div>
+        <div class="card-header bg-info text-white">
+          Current Reservations
+        </div>
+        <div class="card-body">
+          <div class=well>
+            <h2>
+              <span class="label label-primary">1</span>
+              <span id="name">|1</span>
+            </h2>
           </div>
         </div>
-  </div>
-      <div class="row">
-          <div class="card mx-auto mt-2 w-50">
-              <div class="card-header bg-danger text-white">
-                Waiting List
-              </div>
-              <div class="card-body">
-                <div class=well>
-                  <h2>
-                    <span class="label label-primary">1</span> |1
-                  </h2>
-                </div>
-              </div>
-            </div>
       </div>
+    </div>
+    <div class="row">
+      <div class="card mx-auto mt-2 w-50">
+        <div class="card-header bg-danger text-white">
+          Waiting List
+        </div>
+        <div class="card-body">
+          <div class=well>
+            <h2>
+              <span class="label label-primary">1</span> |1
+            </h2>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
   <div class="row mt-4">
     <!-- Footer -->
@@ -92,10 +107,24 @@
   </div>
 
   </div>
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
-  </body>
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+
+  <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+    crossorigin="anonymous"></script>
+  <script type="text/javascript">
+    $.get("/api/tables/", function (data) {
+      console.log(data);
+      if (data) {
+        $("#name").text(data[0].name);
+      } else {
+
+      }
+    });
+  </script>
+</body>
+
 </html>
