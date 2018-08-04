@@ -9,46 +9,76 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
         crossorigin="anonymous">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+        <style>
+            body {
+              background-image: url("images/bg.jpg");
+              background-size:cover;
+            }
+    
+            .jumbotron {
+              border: red solid 1px;
+            }
+            
+    
+            .label-primary {
+             background-color: #ee0000;
+              }
+            .label {
+              display: inline;
+              padding: .2em .6em .3em;
+              font-size: 75%;
+              font-weight: 700;
+              line-height: 1;
+              color: #fff;
+              text-align: center;
+              white-space: nowrap;
+              vertical-align: baseline;
+              border-radius: .25em;
+            }
+            .btn-light {
+              border: black solid 1px;
+            }  
+        </style>
 
-    <title>Hot Restaurant. 3 Star Michelin.</title>
+    <title>Book a Reservation</title>
 </head>
 
 <body>
     <div class="container-fluid">
         <div class="row">
-            <div class="jumbotron mx-auto mt-4">
-                <div class="row">
-                    <h1 class="display-4">Welcome to Le Gavroche</h1>
-                    <p class="lead">XXX Star Michelin Restaurant</p>
-                    <hr class="my-4">
-                    <p>Due to high demand we require reservations 8 weeks in advance</p>
-                    <small>For private dining or if you would like to bribe us for an earlier reservation, please email us at
-                        <a href="mailto:bribe@legavroche.com?Subject=Hello%20again" target="_top">bribe@legavroche.com</a>
-                    </small>
-                </div>
-                <br>
-                <br>
-                <div class="row">
-                    <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
+            <div class="jumbotron mx-auto mt-2 w-50">
+                <h1 class="display-4 text-center">Le Gavroche Currenet Reservations List</h1>
+                <hr class="my-4">
+                <div class="text-center">
+                  <a class="btn btn-light btn-lg" href="/" role="button"><i class="fas fa-home"></i></a>
+                  <a class="btn btn-info btn-lg" href="/tables" role="button"><i class="fas fa-table"></i> View Tables</a>
                 </div>
             </div>
         </div>
         <div class="row">
-            <form action="http://127.0.0.1:3000/api/tables" method="post" enctype='application/json'>
-                <div class="form-group">
-                    <label for="inputName">Name</label>
-                    <input type="text" class="form-control" id="inputName" placeholder="Enter name" name="name">
+            <div class="card mx-auto mt-2 w-50 mb-4">
+                <div class="card-header bg-info text-white">
+                  Current Reservations
                 </div>
-                <div class="form-group">
-                    <label for="inputName">Phone Number</label>
-                    <input type="text" class="form-control" id="inputPhone" placeholder="Enter phone number" name="phone">
+                <div class="card-body">
+                    <form action="http://127.0.0.1:3000/api/tables" method="post" enctype='application/json'>
+                      <div class="form-group">
+                          <label for="inputName">Name</label>
+                          <input type="text" class="form-control" id="inputName" placeholder="Enter name" name="name">
+                      </div>
+                      <div class="form-group">
+                          <label for="inputName">Phone Number</label>
+                          <input type="text" class="form-control" id="inputPhone" placeholder="Enter phone number" name="phone">
+                      </div>
+                      <div class="form-group">
+                          <label for="inputEmail">Email address</label>
+                          <input type="email" class="form-control" id="inputEmail" aria-describedby="emailHelp" placeholder="Enter email" name="email">
+                      </div>
+                      <button type="submit" class="btn btn-danger"><i class="fas fa-utensils"></i> Book Reservation</button>
+                  </form>
                 </div>
-                <div class="form-group">
-                    <label for="inputEmail">Email address</label>
-                    <input type="email" class="form-control" id="inputEmail" aria-describedby="emailHelp" placeholder="Enter email" name="email">
-                </div>
-                <button type="submit" class="btn btn-primary">Submit</button>
-            </form>
+              </div>
         </div>
         <div class="row">
             <div class="footer">
