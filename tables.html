@@ -60,11 +60,7 @@
           Current Reservations
         </div>
         <div class="card-body">
-          <div class=well>
-            <h2>
-              <span class="label label-primary">1</span>
-              <span id="name">|1</span>
-            </h2>
+          <div id="currentReservations">
           </div>
         </div>
       </div>
@@ -108,11 +104,12 @@
   <script type="text/javascript">
     $.get("/api/tables/", function (data) {
       console.log(data);
-      if (data) {
-        $("#name").text(data[0].name);
-      } else {
-
-      }
+      data.forEach(function (table, index) {
+        $("#currentReservations").append($(`<h2>
+              <span class="label label-primary">${index + 1}</span>
+              <span id="name">${table.name}</span>
+            </h2>`))
+      })
     });
   </script>
 </body>
