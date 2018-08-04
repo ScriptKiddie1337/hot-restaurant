@@ -46,8 +46,9 @@ app.post("/api/tables", function (req, res) {
   let newReservation = req.body;
 
   tables.push(newReservation);
-
-  res.sendStatus(200)
+  console.log(tables)
+  res.sendFile(path.join(__dirname, "./tables.html"));
+  // console.log(res.sendStatus(200))
 })
 // Starts the server to begin listening
 // =============================================================
